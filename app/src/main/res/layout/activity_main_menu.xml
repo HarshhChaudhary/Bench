@@ -1,239 +1,270 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainMenu"
+    android:background="@drawable/gradient_background"
+    android:gravity="center"
     android:orientation="vertical"
     android:padding="10dp"
-    android:background="@drawable/gradient_background"
-    android:gravity="center">
+    tools:context=".MainMenu">
+
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:clipToPadding="false"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:orientation="horizontal">
+
         <android.support.v7.widget.CardView
             android:id="@+id/benchamrk"
-            android:foreground="?attr/selectableItemBackground"
-            android:clickable="true"
             android:layout_width="160dp"
             android:layout_height="165dp"
             android:layout_margin="10dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
             app:cardCornerRadius="4dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/benchmark"
-                    android:padding="10dp"/>
+                    android:padding="10dp"
+                    android:src="@drawable/benchmark" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
                     android:layout_marginTop="4dp"
                     android:text="Benchmark"
-                    android:textSize="16dp"/>
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/lightrgray"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:layout_marginTop="5dp"
+                    android:background="@color/lightrgray" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Test your CPU Performance"
                     android:padding="3dp"
-                    android:textColor="@color/darkgray"/>
+                    android:text="Test your CPU Performance"
+                    android:textColor="@color/darkgray" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
+
         <android.support.v7.widget.CardView
             android:id="@+id/history"
-            android:foreground="?attr/selectableItemBackground"
-            android:clickable="true"
             android:layout_width="160dp"
             android:layout_height="165dp"
             android:layout_margin="10dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
             app:cardCornerRadius="4dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/history"
-                    android:padding="10dp"/>
+                    android:padding="10dp"
+                    android:src="@drawable/history" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
                     android:layout_marginTop="4dp"
                     android:text="History"
-                    android:textSize="16dp"/>
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/lightrgray"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:layout_marginTop="5dp"
+                    android:background="@color/lightrgray" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Checkout Previous Tests"
                     android:padding="3dp"
-                    android:textColor="@color/darkgray"/>
+                    android:text="Checkout Previous Tests"
+                    android:textColor="@color/darkgray" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>
+
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:clipToPadding="false"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:orientation="horizontal">
+
         <android.support.v7.widget.CardView
             android:id="@+id/about_phone"
-            android:foreground="?attr/selectableItemBackground"
-            android:clickable="true"
             android:layout_width="160dp"
             android:layout_height="165dp"
             android:layout_margin="10dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
             app:cardCornerRadius="4dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/about_phone"
-                    android:padding="10dp"/>
+                    android:padding="10dp"
+                    android:src="@drawable/about_phone" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
                     android:layout_marginTop="4dp"
                     android:text="About Phone"
-                    android:textSize="16dp"/>
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/lightrgray"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:layout_marginTop="5dp"
+                    android:background="@color/lightrgray" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Check Phone Specifications"
                     android:padding="3dp"
-                    android:textColor="@color/darkgray"/>
+                    android:text="Check Phone Specifications"
+                    android:textColor="@color/darkgray" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
+
         <android.support.v7.widget.CardView
             android:id="@+id/settings"
-            android:foreground="?attr/selectableItemBackground"
-            android:clickable="true"
             android:layout_width="160dp"
             android:layout_height="165dp"
             android:layout_margin="10dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
             app:cardCornerRadius="4dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/settings"
-                    android:padding="10dp"/>
+                    android:padding="10dp"
+                    android:src="@drawable/settings" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
                     android:layout_marginTop="4dp"
                     android:text="Settings"
-                    android:textSize="16dp"/>
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/lightrgray"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:layout_marginTop="5dp"
+                    android:background="@color/lightrgray" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Change Application Settings"
                     android:padding="3dp"
-                    android:textColor="@color/darkgray"/>
+                    android:text="Change Application Settings"
+                    android:textColor="@color/darkgray" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>
+
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:clipToPadding="false"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:orientation="horizontal">
+
         <android.support.v7.widget.CardView
             android:id="@+id/contact_us"
-            android:foreground="?attr/selectableItemBackground"
-            android:clickable="true"
             android:layout_width="340dp"
             android:layout_height="150dp"
             android:layout_margin="10dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
             app:cardCornerRadius="4dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:padding="10dp"
                     android:src="@drawable/contact_us" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
                     android:layout_marginTop="4dp"
                     android:text="Contact Us"
-                    android:textSize="16dp"/>
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/lightrgray"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:layout_marginTop="5dp"
+                    android:background="@color/lightrgray" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="For any queries you can mail us"
                     android:padding="3dp"
-                    android:textColor="@color/darkgray"/>
+                    android:text="For any queries you can mail us"
+                    android:textColor="@color/darkgray" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>

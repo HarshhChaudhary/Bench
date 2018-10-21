@@ -4,16 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".History"
-    android:gravity="center"
     android:background="@drawable/gradient_background"
-    android:padding="10dp">
+    android:gravity="center"
+    android:padding="10dp"
+    tools:context=".History">
+
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="20dp"
         app:cardCornerRadius="4dp">
 
+        <ListView
+            android:id="@+id/list_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:dividerHeight="0dp"></ListView>
     </android.support.v7.widget.CardView>
 
 </LinearLayout>

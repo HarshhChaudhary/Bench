@@ -1,12 +1,8 @@
 package com.harsh.bench;
 
-import android.app.ProgressDialog;
-import android.database.sqlite.SQLiteDatabase;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +13,7 @@ public class Benchmark extends AppCompatActivity {
     String test_string = "A Quick Brown Fox jumped over the lazy Dog.";
     Integer score, s;
     Double time, t;
+    int acc = 60000;
     DatabaseHelper mDatabaseHelper;
     private TextView c1_status, c1_score, c1_time, c2_status, c2_score, c2_time, c3_status,
             c3_score, c3_time, c4_status, c4_score, c4_time, c_totalscore, c_totaltime;
@@ -47,7 +44,7 @@ public class Benchmark extends AppCompatActivity {
         t = 0.0;
         Tests tests = new Tests(test_string);
         timestart = System.nanoTime();
-        for (Integer i = 0; i < 60000; i++) {
+        for (Integer i = 0; i < acc; i++) {
             tests.SH1Encryption();
         }
         testtime = System.nanoTime() - timestart;
@@ -61,7 +58,7 @@ public class Benchmark extends AppCompatActivity {
         t = t + time;
 
         timestart = System.nanoTime();
-        for (Integer i = 0; i < 60000; i++) {
+        for (Integer i = 0; i < acc; i++) {
             tests.MD5Encrypation();
         }
         testtime = System.nanoTime() - timestart;
@@ -73,12 +70,40 @@ public class Benchmark extends AppCompatActivity {
         c2_time.setText(new DecimalFormat("##.#").format(time) + " s");
         s = s + score;
         t = t + time;
-        s = s / 2;
+
+        timestart = System.nanoTime();
+        for (Integer i = 0; i < acc; i++) {
+            tests.SHA256Encryption();
+        }
+        testtime = System.nanoTime() - timestart;
+
+        time = (double) (testtime) / 1000000000;
+        score = Math.round(testtime / 1000000);
+        c3_status.setText("Success!");
+        c3_score.setText(score.toString());
+        c3_time.setText(new DecimalFormat("##.#").format(time) + " s");
+        s = s + score;
+        t = t + time;
+
+        timestart = System.nanoTime();
+        for (Integer i = 0; i < acc; i++) {
+            tests.primeNumber(i);
+        }
+        testtime = System.nanoTime() - timestart;
+
+        time = (double) (testtime) / 1000000000;
+        score = Math.round(testtime / 1000000);
+        c4_status.setText("Success!");
+        c4_score.setText(score.toString());
+        c4_time.setText(new DecimalFormat("##.#").format(time) + " s");
+        s = s + score;
+        t = t + time;
+        s = s / 4;
 
         c_totalscore.setText(s.toString());
         c_totaltime.setText(new DecimalFormat("##.#").format(t) + " s");
-        AddData("Score: " + s, "Time Taken: " + new DecimalFormat("##.#").format(t) + " s");
-
+        AddData("Score: " + s, "Time Taken: " +
+                new DecimalFormat("##.#").format(t) + " s");
     }
 
     public void AddData(String sc, String ti) {

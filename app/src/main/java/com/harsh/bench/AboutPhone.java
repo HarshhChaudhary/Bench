@@ -32,7 +32,7 @@ public class AboutPhone extends AppCompatActivity {
                 "DENSITY_HIGH: " + DisplayMetrics.DENSITY_HIGH,
                 "heightPixels: " + metrics.heightPixels, "widthPixels: " + metrics.widthPixels};
         ArrayAdapter adapter =
-                new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, properties);
+                new ArrayAdapter<>(this, R.layout.list_adapter_aboutphone, properties);
         listView_aboutphone.setAdapter(adapter);
 
     }

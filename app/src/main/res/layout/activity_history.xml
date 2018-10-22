@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
     android:gravity="center"
+    android:orientation="vertical"
     android:padding="10dp"
     tools:context=".History">
 
@@ -20,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:divider="@null"
-            android:dividerHeight="0dp"></ListView>
+            android:dividerHeight="5dp"></ListView>
     </android.support.v7.widget.CardView>
 
 </LinearLayout>

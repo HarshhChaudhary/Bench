@@ -25,7 +25,8 @@ public class ContactUs extends AppCompatActivity {
                 break;
 
             case R.id.cu_telegram:
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.t.me/cn_mido/")));
+                startActivity(new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("https://www.t.me/cn_mido/")));
                 break;
             case R.id.cu_share:
                 Intent intent1 = new Intent(Intent.ACTION_SEND);

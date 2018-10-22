@@ -11,16 +11,39 @@
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
         app:cardCornerRadius="4dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Coming Soon..."
-            android:textColor="@color/textcolour"
-            android:textSize="36dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/gradient_background"
+                android:foreground="?attr/selectableItemBackground"
+                android:onClick="onClick">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Clear History"
+                    android:textSize="15dp" />
+            </android.support.v7.widget.CardView>
+
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:id="@+id/mspinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:hint="Benchmark Accuracy"
+                android:textColorHint="#05ab9a" />
+        </LinearLayout>
     </android.support.v7.widget.CardView>
 
 </LinearLayout>

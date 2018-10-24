@@ -1,5 +1,5 @@
-# Bench
-Project webpage: https://harshhchaudhary.github.io/
+# µBench
+## Project webpage: https://harshhchaudhary.github.io/
 
 This project is licensed under the GNU General Public License v3.0
 

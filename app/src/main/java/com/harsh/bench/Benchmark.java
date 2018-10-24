@@ -13,7 +13,7 @@ public class Benchmark extends AppCompatActivity {
     String test_string = "A Quick Brown Fox jumped over the lazy Dog.";
     Integer score, s;
     Double time, t;
-    int acc = 60000;
+    int acc = 100000;
     DatabaseHelper mDatabaseHelper;
     private TextView c1_status, c1_score, c1_time, c2_status, c2_score, c2_time, c3_status,
             c3_score, c3_time, c4_status, c4_score, c4_time, c_totalscore, c_totaltime;
@@ -40,6 +40,23 @@ public class Benchmark extends AppCompatActivity {
     }
 
     public void onClick(View view) {
+        calcScore();
+    }
+
+    public void AddData(String sc, String ti) {
+        boolean insertData = mDatabaseHelper.addData(sc, ti);
+        if (insertData == true) {
+            toastMessage("Success!");
+        } else {
+            toastMessage("Failed!");
+        }
+    }
+
+    public void toastMessage(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    public void calcScore() {
         s = 0;
         t = 0.0;
         Tests tests = new Tests(test_string);
@@ -51,6 +68,7 @@ public class Benchmark extends AppCompatActivity {
 
         time = (double) (testtime) / 1000000000;
         score = Math.round(testtime / 1000000);
+        score = 3000 - score;
         c1_status.setText("Success!");
         c1_score.setText(score.toString());
         c1_time.setText(new DecimalFormat("##.#").format(time) + " s");
@@ -65,6 +83,7 @@ public class Benchmark extends AppCompatActivity {
 
         time = (double) (testtime) / 1000000000;
         score = Math.round(testtime / 1000000);
+        score = 3000 - score;
         c2_status.setText("Success!");
         c2_score.setText(score.toString());
         c2_time.setText(new DecimalFormat("##.#").format(time) + " s");
@@ -79,6 +98,7 @@ public class Benchmark extends AppCompatActivity {
 
         time = (double) (testtime) / 1000000000;
         score = Math.round(testtime / 1000000);
+        score = 3000 - score;
         c3_status.setText("Success!");
         c3_score.setText(score.toString());
         c3_time.setText(new DecimalFormat("##.#").format(time) + " s");
@@ -93,6 +113,7 @@ public class Benchmark extends AppCompatActivity {
 
         time = (double) (testtime) / 1000000000;
         score = Math.round(testtime / 1000000);
+        score = 3000 - score;
         c4_status.setText("Success!");
         c4_score.setText(score.toString());
         c4_time.setText(new DecimalFormat("##.#").format(time) + " s");
@@ -104,19 +125,6 @@ public class Benchmark extends AppCompatActivity {
         c_totaltime.setText(new DecimalFormat("##.#").format(t) + " s");
         AddData("Score: " + s, "Time Taken: " +
                 new DecimalFormat("##.#").format(t) + " s");
-    }
-
-    public void AddData(String sc, String ti) {
-        boolean insertData = mDatabaseHelper.addData(sc, ti);
-        if (insertData == true) {
-            toastMessage("Success!");
-        } else {
-            toastMessage("Failed!");
-        }
-    }
-
-    public void toastMessage(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }
 

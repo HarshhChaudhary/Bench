@@ -68,7 +68,7 @@ public class Benchmark extends AppCompatActivity {
 
         time = (double) (testtime) / 1000000000;
         score = Math.round(testtime / 1000000);
-        score = 3000 - score;
+        score =score;
         c1_status.setText("Success!");
         c1_score.setText(score.toString());
         c1_time.setText(new DecimalFormat("##.#").format(time) + " s");
@@ -83,7 +83,7 @@ public class Benchmark extends AppCompatActivity {
 
         time = (double) (testtime) / 1000000000;
         score = Math.round(testtime / 1000000);
-        score = 3000 - score;
+        score =score;
         c2_status.setText("Success!");
         c2_score.setText(score.toString());
         c2_time.setText(new DecimalFormat("##.#").format(time) + " s");
@@ -98,7 +98,7 @@ public class Benchmark extends AppCompatActivity {
 
         time = (double) (testtime) / 1000000000;
         score = Math.round(testtime / 1000000);
-        score = 3000 - score;
+        score =score;
         c3_status.setText("Success!");
         c3_score.setText(score.toString());
         c3_time.setText(new DecimalFormat("##.#").format(time) + " s");
@@ -113,7 +113,7 @@ public class Benchmark extends AppCompatActivity {
 
         time = (double) (testtime) / 1000000000;
         score = Math.round(testtime / 1000000);
-        score = 3000 - score;
+        score =score;
         c4_status.setText("Success!");
         c4_score.setText(score.toString());
         c4_time.setText(new DecimalFormat("##.#").format(time) + " s");
